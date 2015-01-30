@@ -61,21 +61,65 @@ console.log('===================================');
 //5
 
 var removeM = function(content){
-for (var i = 0; i < content.length; i++){
-	if (i = "m"){
+
+	return content.replace(/m/g, "");
+
+};
+
+console.log(removeM('family'));
+console.log(removeM('memory'));
+
+
+
+console.log('===================================');
+
+
+
+//6
+
+var printObject = function(obj){
 	
-		console.log("theres an M!");
-	}
-	else{
-		
-	}
+for (var prop in obj){
+	console.log(prop + " is " + obj[prop]);
 }
 
 
 };
 
-removeM('family');
-removeM('memory');
+printObject({ a: 10, b: 20, c: 30 });
+printObject({ firstName: 'pork', lastName: 'chops' });
+
+
+
+console.log('===================================');
+
+//7
+
+
+
+
+
+var vowels = function(vowel){
+var arr = ["a", "e", "i", "o", "u"]
+
+return  _.filter(vowel, function(elament){
+
+	return elament === arr  ;
+});
+
+
+
+};
+
+console.log(vowels('alabama'));
+console.log(vowels('What lets in youth?'));
+
+
+
+
+
+
+
 
 
 
